@@ -18,19 +18,19 @@
     }
 
     function onMessageArrived(msg){
-      // out_msg="Message received: " + msg.payloadString + "<br>";
-      // out_msg=out_msg + "Message received Topic: " + msg.destinationName + "<br>";
-      // console.log(out_msg);
+      out_msg="Message received: " + msg.payloadString + "<br>";
+      out_msg=out_msg + "Message received Topic: " + msg.destinationName + "<br>";
+      console.log(out_msg);
       actionReceived("estado", msg.payloadString)
     }
 
     function onMessageSend(msg){
       message = new Paho.MQTT.Message(msg);
       message.destinationName = "esp8266/ledAction_bradley";
-      // send_msg="Sending Message: " + msg;
-      // send_msg=send_msg + " to Topic: " + msg.destinationName + "<br>";
+      send_msg="Sending Message: " + msg;
+      send_msg=send_msg + " to Topic: " + msg.destinationName + "<br>";
       mqtt.send(message);
-      // console.log(send_msg);
+      console.log(send_msg);
     }
 
     function MQTTconnect(){
