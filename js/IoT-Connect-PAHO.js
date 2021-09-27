@@ -1,5 +1,6 @@
 
     var mqtt;
+    var clientId = "clientCBradley" + String(int(Math.random() * 1000000)
     var reconnectTimeout = 2000;
     var host="broker.emqx.io";
     var port=8083;
@@ -7,7 +8,7 @@
     function onConnect(){
       console.log("Connected");
       mqtt.subscribe("esp8266/ledAction_bradley");
-      message = new Paho.MQTT.Message("Hello World desde WEB PAHO");
+      message = new Paho.MQTT.Message("Hola dice: " + clientId);
       message.destinationName = "esp8266/ledAction_bradley";
       mqtt.send(message);
     }
@@ -35,7 +36,7 @@
 
     function MQTTconnect(){
       // console.log("Connecting to: " + host + ":" + port);
-      mqtt = new Paho.MQTT.Client(host, port, "clientjs");
+      mqtt = new Paho.MQTT.Client(host, port, clientId);
       // document.write("Connecting to: " + host);
       var options = {
         timeout: 3,
