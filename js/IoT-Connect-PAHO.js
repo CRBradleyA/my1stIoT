@@ -1,6 +1,6 @@
 
     var mqtt;
-    var clientId = "clientCBradley" + String(int(Math.random() * 1000000)
+    var clientId = "clientCBradley" + String(Math.floor(Math.random() * 1000000))
     var reconnectTimeout = 2000;
     var host="broker.emqx.io";
     var port=8083;
