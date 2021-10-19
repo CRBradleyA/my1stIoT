@@ -7,9 +7,9 @@
 
     function onConnect(){
       console.log("Connected");
-      mqtt.subscribe("esp8266/ledAction_bradley");
+      mqtt.subscribe("esp8266/ledStatus_bradley");
       message = new Paho.MQTT.Message("Hola dice: " + clientId);
-      message.destinationName = "esp8266/ledAction_bradley";
+      message.destinationName = "esp8266/ledStatus_bradley";
       mqtt.send(message);
     }
 
@@ -53,5 +53,5 @@
 //    }
     function actionReceived(id, Action){
        var elem = document.getElementById(id);
-       elem.innerHTML = "Led 1 is " + Action;
+       elem.innerHTML = "Led 1: " + Action;
     }
