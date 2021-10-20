@@ -1,4 +1,4 @@
-
+    // Cambios JS
     var mqtt;
     var clientId = "client-" + String(Math.floor(Math.random() * 1000000))
     var reconnectTimeout = 2000;
