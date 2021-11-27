@@ -100,7 +100,7 @@
         min: 0,
         max: 60,
         title: "Temperature",
-        label: "ยบC"
+        label: "°C"
       });
 
       g3 = new JustGage({

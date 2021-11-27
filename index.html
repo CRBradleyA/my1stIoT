@@ -42,7 +42,7 @@
 			</div>
 			<div class="contenedorContenido Izq">
 				<div class="contenidoIzq">
-					<div class="columnIzq"><button id='buttonConnect' style='background-color:green;  color:white; border-radius: 10px; border-color: rgb(255, 0, 0);' type='button' onclick="MQTTconnect();"><h4 id="conectar">Conectar a EMQX</h4></button></div>
+					<div class="columnIzq"><button class="boton" id='buttonConnect' type='button' onclick="MQTTconnect();"><h4 id="conectar">Conectar a EMQX</h4></button></div>
 				</div>
 			</div>
 			<div class="contenedorContenido Izq">
@@ -93,8 +93,8 @@
 						  <ellipse transform="rotate(-47.7626 249.18 168.124)" id="svg_20" ry="44.402987" rx="75.675959" cy="168.124194" cx="249.179609" stroke-linecap="round" stroke-width="17.5" fill="url(#svg_14)"/>
 						 </g>
 						</svg>
-						<button id='buttonOff' style='background-color:red;  color:white; border-radius: 10px; border-color: rgb(255, 0, 0);' type='button' onclick="onMessageSend('off');"><h2>Apagar</h2></button>
-						<button style='background-color:blue; color:white; border-radius: 10px; border-color: rgb(25, 255, 4);' type='button' onClick="onMessageSend('on');"><h2>Encender</h2></button>
+						<button class="boton" id='buttonOff' type='button' onclick="onMessageSend('off');"><h2>Apagar</h2></button>
+						<button class="boton" id='buttonOn' type='button' onClick="onMessageSend('on');"><h2>Encender</h2></button>
 					</div>
 				</div>
 			</div>
