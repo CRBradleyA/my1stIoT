@@ -27,42 +27,43 @@
     }
 
     function actionReceived(id, Action){
-	  var idElement = id
-	  var txtElement = Action
+      var idElement = id
+      var txtElement = Action
       if (Action=="Connected"){
-		idElement = "conectar"
-	    txtElement = Action + " to EMQX"
-		document.getElementById(idElement).innerHTML = txtElement
-	  }
-	  else {
-		if (Action=="off"){
-	      document.getElementById("Led1").setAttribute("stop-color", "#000000");
-	      document.getElementById("Luz1").setAttribute("stop-color", "#820101");
-	    }
-	    else if (Action=="on"){
-	      document.getElementById("Led1").setAttribute("stop-color", "#ff0000");
-	      document.getElementById("Luz1").setAttribute("stop-color", "#aa1010");
-	    }
-		else {
-		  var Obj_Json = JSON.parse(Action)
-		  txtElement = "Led 1: " + Obj_Json["led1"]
-		  if (Obj_Json["led1"]=="off"){
-		    document.getElementById("Led1").setAttribute("stop-color", "#000000");
-		    document.getElementById("Luz1").setAttribute("stop-color", "#820101");
-		  }
-		  else if (Obj_Json["led1"]){
-		    document.getElementById("Led1").setAttribute("stop-color", "#ff0000");
-		    document.getElementById("Luz1").setAttribute("stop-color", "#aa1010");
-		  }
+        idElement = "conectar"
+        txtElement = Action + " to EMQX"
+        document.getElementById(idElement).innerHTML = txtElement
+      }
+      else {
+        if (Action=="off"){
+          document.getElementById("Led1").setAttribute("stop-color", "#000000");
+          document.getElementById("Luz1").setAttribute("stop-color", "#820101");
+        }
+        else if (Action=="on"){
+          document.getElementById("Led1").setAttribute("stop-color", "#ff0000");
+          document.getElementById("Luz1").setAttribute("stop-color", "#aa1010");
+        }
+        else {
+          var Obj_Json = JSON.parse(Action)
+          txtElement = "Led 1: " + Obj_Json["led1"]
+          if (Obj_Json["led1"]=="off"){
+            document.getElementById("Led1").setAttribute("stop-color", "#000000");
+            document.getElementById("Luz1").setAttribute("stop-color", "#820101");
+          }
+          else if (Obj_Json["led1"]){
+            document.getElementById("Led1").setAttribute("stop-color", "#ff0000");
+            document.getElementById("Luz1").setAttribute("stop-color", "#aa1010");
+          }
 
-		  g2.refresh(Obj_Json["temp1"]);
-		  g3.refresh(Obj_Json["hum1"]);
-		}
-		document.getElementById(idElement).innerHTML = txtElement
-	  }
+          g2.refresh(Obj_Json["temp1"]);
+          g3.refresh(Obj_Json["hum1"]);
+        }
+        document.getElementById(idElement).innerHTML = txtElement;
+      }
 //      var elem = document.getElementById(idElement);
 //	  console.log("Action Led1: " + Action["led1"])
-	  console.log(Action)
+          console.log(idElement)
+          console.log(Action)
   //    elem.innerHTML = txtElement;
     }
 
