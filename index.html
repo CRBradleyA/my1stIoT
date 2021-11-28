@@ -37,17 +37,35 @@
 			</div>
 			<div class="contenedorContenido Izq">
 				<div class="contenidoIzq">
-					<div class="columnIzq"><h4>Ingresa tu usuario y contraseña, y selecciona el dispositivo</h4></div>
+					<div class="columnIzq">
+						<form>
+							<label>Username : </label>
+							<input type="text" placeholder="Enter Username" name="username" required>
+							<label>Password : </label>
+							<input type="password" placeholder="Enter Password" name="password" required>
+							<button type="submit">Login</button>
+							<input type="checkbox" checked="checked"> Remember me
+							<button type="button" class="cancelbtn"> Cancel</button>   
+							Forgot <a href="#"> password? </a>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="contenedorContenido Izq">
+				<div class="contenidoIzq">
+					<div class="columnIzq">
+						<label>Selecione sistema: </label>   
+						<select>  
+							 <option>Sistema Uno</option>
+							 <option>Sistema Dos</option>
+							 <option>Sistema Tres</option>
+						</select>
+					</div>
 				</div>
 			</div>
 			<div class="contenedorContenido Izq">
 				<div class="contenidoIzq">
 					<div class="columnIzq"><button class="boton" id='buttonConnect' type='button' onclick="MQTTconnect();"><h4 id="conectar">Conectar a EMQX</h4></button></div>
-				</div>
-			</div>
-			<div class="contenedorContenido Izq">
-				<div class="contenidoIzq">
-					<div class="columnIzq"><p id="row4">Contenido Fila 3 Col 1</p></div>
 				</div>
 			</div>
 			<div class="contenedorContenido Izq">

@@ -9,9 +9,16 @@
 #g2, #g3, #g4 {
 	width:50%; height:40%;
 	display: inline-block;
-	margin: 1em;
+	/* margin: 1em; */
 }
-
+input[type=text], input[type=password] {   
+    width: 100%;   
+    margin: 8px 0;  
+    padding: 12px 20px;   
+    display: inline-block;   
+    border: 2px solid green;   
+    box-sizing: border-box;   
+}  
 .contenedorHeader {
 	width: 90%;
 	height: 80px;
