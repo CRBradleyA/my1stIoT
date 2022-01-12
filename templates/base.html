@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+	<meta charset="utf-8">
+	<title>{% block title %} {% endblock %}</title>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+	
+<!-- Option one -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.1/mqttws31.js" type="text/javascript"></script>
+<!-- Opition two -->
+	<script src="/static/js/mqttws31.js"></script>
+
+</head>
+
+<body>
+	<header>
+		<nav class="contenedorHeader">
+			<div class="logotipo">
+				<img class="icono" src="/static/images/icons/noun_internet of things_143916.png">
+			</div>
+			<div class="contenedorMenu">
+				<button class="menu">Inicio</button>
+				<button class="menu">Enlace 1</button>
+				<button class="menu">Enlace 2</button>
+				<button id="logBtn" class="menu">Sign In</button>
+			</div>
+		</nav>
+	</header>
+	{% block cuerpo %} {% endblock %}
+
+	<div id="logModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+
+				<form>
+					<label>Username : </label>
+					<input type="text" placeholder="Enter Username" name="username" required>
+					<label>Password : </label>
+					<input type="password" placeholder="Enter Password" name="password" required>
+					<button type="submit">Login</button>
+					<input type="checkbox" checked="checked"> Remember me
+					<button type="button" class="cancelbtn"> Cancel</button>   
+					Forgot <a href="#"> password? </a>
+				</form>
+		</div>
+	</div>
+
+	<script>
+		// Get the modal
+		var modal = document.getElementById("logModal");
+		
+		// Get the button that opens the modal
+		var btn = document.getElementById("logBtn");
+		
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+		
+		// When the user clicks the button, open the modal 
+		btn.onclick = function() {
+		  modal.style.display = "block";
+		}
+		
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function() {
+		  modal.style.display = "none";
+		}
+		
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		  if (event.target == modal) {
+			modal.style.display = "none";
+		  }
+		}
+	</script>
+		
+</body>
+</html>
