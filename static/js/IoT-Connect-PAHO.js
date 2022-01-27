@@ -95,7 +95,7 @@
     window.onload = function(){
       g2 = new JustGage({
         id: "g2",
-        <!-- value: getRandomInt(0, 100),--!>
+      //  value: getRandomInt(0, 100),
         value: 0,
         min: 0,
         max: 60,
@@ -112,11 +112,11 @@
         label: "%H"
       });
 
-	<!-- setInterval(function() { -->
-	<!-- g2.refresh(getRandomInt(50, 100)); -->
-	<!-- g3.refresh(getRandomInt(0, 50)); -->
-	<!-- }, 2500); -->
-    };
+		// setInterval(function() { 
+	  // g2.refresh(getRandomInt(50, 100));
+	  // g3.refresh(getRandomInt(0, 50));
+	  // }, 2500);
+  };
 
 //    function changeColor(newColor, Action) {
 //       var elem = document.getElementById('buttonOn');
