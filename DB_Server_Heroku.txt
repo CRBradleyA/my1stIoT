@@ -1,0 +1,14 @@
+Host
+ec2-52-70-186-184.compute-1.amazonaws.com
+Database
+d9388nq9udfotu
+User
+kdffnkkxwzxfmx
+Port
+5432
+Password
+cc77d3179b3ff1b4d71d84bb026696e950fedac865253b42c0a18f9e217e9b01
+URI
+postgres://kdffnkkxwzxfmx:cc77d3179b3ff1b4d71d84bb026696e950fedac865253b42c0a18f9e217e9b01@ec2-52-70-186-184.compute-1.amazonaws.com:5432/d9388nq9udfotu
+Heroku CLI
+heroku pg:psql postgresql-asymmetrical-70249 --app control-iot
